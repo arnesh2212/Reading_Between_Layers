@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://img.shields.io/badge/EACL_2026-4a4a4a?style=for-the-badge" alt="EACL 2026"><img src="https://img.shields.io/badge/PAPER-6f42c1?style=for-the-badge" alt="Paper">
+<img src="https://img.shields.io/badge/Findings_of_EACL-2026-6f42c1?style=for-the-badge" alt="Findings of EACL 2026">
 
 <h1>Reading Between the Layers:<br>Where Representation Quality Lives, and What Geometry Reveals</h1>
 
@@ -12,9 +12,7 @@
 
 <sup>1</sup>Indraprastha Institute of Information Technology Delhi, India &nbsp;&nbsp; <sup>2</sup>Manipal University Jaipur, India
 
-<!-- TODO: point the arXiv / paper badges at the final links. -->
-<a href="#"><img src="https://img.shields.io/badge/arXiv-coming_soon-b31b1b?logo=arxiv&logoColor=white" alt="arXiv"></a>
-<a href="#"><img src="https://img.shields.io/badge/Paper-PDF-8c1515" alt="Paper"></a>
+<img src="https://img.shields.io/badge/arXiv-coming_soon-b31b1b?logo=arxiv&logoColor=white" alt="arXiv: coming soon">
 <a href="https://github.com/arnesh2212/Reading_Between_Layers"><img src="https://img.shields.io/badge/Code-GitHub-181717?logo=github" alt="Code"></a>
 <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-4c9a2a" alt="License: MIT"></a>
 
@@ -27,7 +25,7 @@
 
 <br>
 
-This repository contains the code, configs and exported results for **Reading Between the Layers**. It covers two things:
+This repository contains the code, configs and exported results for **Reading Between the Layers** (*Findings of EACL 2026*; arXiv version coming soon). It covers two things:
 
 1. **A layerwise study.** Linear and MLP probes are trained on every layer of **25 pretrained models** (encoders, contrastive sentence encoders, encoder–decoders, decoders and a state-space model) across **13 datasets**, 4 task families and 4 readouts. The study shows that peak layers are structured by pretraining objective, task and readout rather than sitting at the final layer.
 2. **The Stable Geometry Index (SGI).** SGI is a closed-form, fully label-free layer selector with no fitted coefficients. On 383 encoder evaluation groups it improves over the last layer by **+1.20 pp** and lifts **Hit@3 from 0.389 to 0.517**, recovering about 40% of the oracle gap without labels.
@@ -62,7 +60,6 @@ This repository contains the code, configs and exported results for **Reading Be
 - [Repository layout](#repository-layout)
 - [Exported result files](#exported-result-files)
 - [Tests](#tests)
-- [Citation](#citation)
 
 ## Installation
 
@@ -275,18 +272,6 @@ These tables are derived from public checkpoints and datasets. They contain aggr
 pip install -e ".[pipeline,dev]"
 pytest -m "not slow"          # unit tests + paper-number regression tests (~1-2 min, CPU)
 pytest -m slow                # also downloads small checkpoints and runs real forward passes
-```
-
-## Citation
-
-```bibtex
-@misc{batra2026readingbetweenlayers,
-  title  = {Reading Between the Layers: Where Representation Quality Lives, and What Geometry Reveals},
-  author = {Batra, Arnesh and Khandelwal, Aniket and Gumber, Arush and Thukral, Krish and
-            Agrawal, Kushagra and Sharma, Dev},
-  year   = {2026},
-  note   = {Code: https://github.com/arnesh2212/Reading_Between_Layers}
-}
 ```
 
 ## License
