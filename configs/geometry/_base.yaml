@@ -1,0 +1,28 @@
+# Base schema for a geometry config. Variants toggle which metrics run.
+metrics:
+  isotropy_mu_viswanath: true
+  isotropy_eigenvalue_ratio: true
+  anisotropy_random_pairs: true
+  effective_rank: true
+  stable_rank: true
+  participation_ratio: true
+  rankme: true
+  alpha_req: true
+  condition_number: true
+  top1_variance_ratio: true
+  twonn_intrinsic_dim: true
+  linear_cka: true
+  lidar: true
+  jer: false
+  isoscore: true
+  geodesic_euclidean_ratio: true
+  intra_inter_cosine: true
+  information_theory_basic: true
+# Explicit row cap. Leave null to use sample_fraction.
+sample_size: null
+# Fraction of the train split used per layer for geometry metrics.
+sample_fraction: 0.1
+geometry_input: pooled
+layer_norm_position: post
+random_pair_count: 100000
+seed: 42

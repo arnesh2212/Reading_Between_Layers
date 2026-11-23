@@ -1,0 +1,12 @@
+defaults:
+  - _base
+  - _self_
+
+name: bart_large
+hf_id: facebook/bart-large
+family: encoder_decoder
+size_tier: A
+hidden_size: 1024
+num_layers: 12
+has_cls: true
+supports_chat_template: false

@@ -1,0 +1,13 @@
+defaults:
+  - _base
+  - _self_
+
+name: codegpt_small_py
+hf_id: microsoft/CodeGPT-small-py
+family: decoder
+size_tier: A
+hidden_size: 768
+num_layers: 12
+has_cls: false
+supports_chat_template: false
+pad_token_strategy: eos

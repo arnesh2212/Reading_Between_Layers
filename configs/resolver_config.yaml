@@ -1,0 +1,16 @@
+# Hydra entry point for pipeline/00_resolve_sweep.py.
+# Walks registries instead of needing a single model/dataset/task; therefore omits those groups.
+defaults:
+  - _self_
+  - experiment: paper
+  - cache: default
+  - extraction: default
+  - probe: linear
+  - geometry: fast_only
+  - pooling: cls
+
+seed: 42
+device: cuda
+dtype: float16
+dry_run: false
+dispatch: false

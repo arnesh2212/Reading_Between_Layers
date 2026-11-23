@@ -1,0 +1,17 @@
+defaults:
+  - _base
+  - _self_
+
+name: mnli
+hf_id: nyu-mll/multi_nli
+hf_subset: null
+split_train: train
+split_val: validation_matched
+split_test: null
+task_type: pair_classification
+mteb_category: null
+language: en
+text_field: premise
+label_field: label
+pair_fields: [premise, hypothesis]
+# NLI cross-domain

@@ -1,0 +1,18 @@
+# Base schema for the cache config.
+root: ???
+embeddings_dtype: float16
+embeddings_format: torch
+geometry_format: parquet
+probes_format: parquet
+selection_format: parquet
+hashing:
+  include_in_key:
+    - model.hf_id
+    - dataset.hf_id
+    - dataset.hf_subset
+    - dataset.split
+    - extraction.layer_index
+    - pooling.name
+    - cache.embeddings_dtype
+  exclude_from_key: []
+verify_on_read: false

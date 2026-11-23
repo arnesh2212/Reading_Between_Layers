@@ -1,0 +1,12 @@
+defaults:
+  - _base
+  - _self_
+
+name: modernbert_large
+hf_id: answerdotai/ModernBERT-large
+family: encoder
+size_tier: A
+hidden_size: 1024
+num_layers: 28
+has_cls: true
+supports_chat_template: false

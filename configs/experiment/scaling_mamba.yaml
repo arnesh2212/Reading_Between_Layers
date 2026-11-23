@@ -1,0 +1,24 @@
+# Larger-model scaling probe (Section 6.2, Table 7): Mamba-2.8B on ARC, PIQA
+# and STS-B. Kept separate from the encoder scaling run:
+#
+#   EXPERIMENT=scaling_mamba CACHE_ROOT=outputs/scaling_mamba/cache \
+#     RESULTS_DIR=results/scaling_mamba scripts/run_sweep.sh
+defaults:
+  - _base
+
+mode: sweep
+models:
+  - mamba_2_8b
+
+datasets:
+  - arc
+  - piqa
+  - sts_b
+
+tasks: __auto_from_dataset__
+probes: [linear, nonlinear]
+poolings: __task_default_plus_alternatives__
+seeds: [42, 1337, 2024]
+parallelism:
+  models_in_parallel: 1
+  datasets_in_parallel: 1

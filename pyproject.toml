@@ -1,0 +1,81 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "reading-between-layers"
+version = "0.1.0"
+description = "Where representation quality lives across layers, and the Stable Geometry Index (SGI) for label-free layer selection."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+authors = [
+    { name = "Arnesh Batra" },
+    { name = "Aniket Khandelwal" },
+    { name = "Arush Gumber" },
+    { name = "Krish Thukral" },
+    { name = "Kushagra Agrawal" },
+    { name = "Dev Sharma" },
+]
+keywords = ["representation learning", "probing", "layer selection", "embedding geometry", "NLP"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+# Core install: SGI + every CPU-side analysis that regenerates the paper's
+# tables and figures from the exported results in results/.
+dependencies = [
+    "numpy>=1.26",
+    "pandas>=2.1",
+    "pyarrow>=14",
+    "scipy>=1.11",
+    "matplotlib>=3.8",
+    "tqdm>=4.66",
+]
+
+[project.optional-dependencies]
+# Full GPU pipeline: embedding extraction, geometry, and probe training.
+pipeline = [
+    "torch>=2.1",
+    "transformers>=4.46",
+    "datasets>=3.0",
+    "huggingface-hub>=0.26",
+    "safetensors>=0.4",
+    "sentence-transformers>=3.0",
+    "sentencepiece>=0.2",
+    "tiktoken>=0.7",
+    "protobuf>=4.25",
+    "hydra-core>=1.3",
+    "omegaconf>=2.3",
+    "scikit-learn>=1.4",
+]
+wandb = ["wandb>=0.17"]
+dev = ["pytest>=8", "ruff>=0.6"]
+
+[project.urls]
+Homepage = "https://github.com/arnesh2212/Reading_Between_Layers"
+Repository = "https://github.com/arnesh2212/Reading_Between_Layers"
+
+[tool.setuptools.packages.find]
+include = ["reading_between_layers*"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP"]
+ignore = ["E501", "E731"]
+
+[tool.ruff.lint.per-file-ignores]
+# Entry-point scripts put the repo root on sys.path before importing the package.
+"pipeline/*" = ["E402"]
+"scripts/*" = ["E402"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+markers = [
+    "slow: tests that download real model weights and run a forward pass",
+]

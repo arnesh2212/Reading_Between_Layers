@@ -1,0 +1,17 @@
+defaults:
+  - _base
+  - _self_
+
+name: arc
+hf_id: allenai/ai2_arc
+hf_subset: ARC-Challenge
+split_train: train
+split_val: validation
+split_test: test
+task_type: multiple_choice_qa
+mteb_category: null
+language: en
+text_field: question
+label_field: answerKey
+pair_fields: null
+# scientific QA, variable-choice; represented with 5 answer slots

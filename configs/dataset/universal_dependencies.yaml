@@ -1,0 +1,17 @@
+defaults:
+  - _base
+  - _self_
+
+name: universal_dependencies
+hf_id: universal-dependencies/universal_dependencies
+hf_subset: en_ewt
+split_train: train
+split_val: validation
+split_test: test
+task_type: token_classification
+mteb_category: null
+language: en
+text_field: tokens
+label_field: upos
+pair_fields: null
+# UPOS tags; en_ewt subset

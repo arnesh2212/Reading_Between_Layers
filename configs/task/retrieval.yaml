@@ -1,0 +1,13 @@
+defaults:
+  - _base
+  - _self_
+
+name: retrieval
+metric_primary: mrr_at_10
+metrics_secondary: [ndcg_at_10, recall_at_100]
+pooling_default: cls
+pooling_options: [cls]
+allowed_families: [encoder, encoder_decoder, ssm]
+probe_type_default: linear
+probe_types_allowed: [linear, nonlinear, lora, full_ft]
+needs_labels_for_geometry: false

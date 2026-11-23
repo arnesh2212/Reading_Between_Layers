@@ -1,0 +1,14 @@
+defaults:
+  - _base
+  - _self_
+
+name: mamba_2_8b
+hf_id: state-spaces/mamba-2.8b-hf
+family: ssm
+size_tier: A
+hidden_size: 2560
+num_layers: 64
+has_cls: false
+supports_chat_template: false
+pad_token_strategy: eos
+trust_remote_code: true

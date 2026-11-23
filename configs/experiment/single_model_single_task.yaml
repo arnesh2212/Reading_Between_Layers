@@ -1,0 +1,5 @@
+defaults:
+  - _base
+
+mode: single
+seeds: [42]

@@ -1,0 +1,14 @@
+# Base schema for a model config. Concrete model files override required fields.
+name: ???
+hf_id: ???
+family: ???
+size_tier: ???
+hidden_size: ???
+num_layers: ???
+has_cls: ???
+supports_chat_template: false
+quantization: null
+trust_remote_code: false
+torch_dtype: float16
+max_length: 512
+pad_token_strategy: default

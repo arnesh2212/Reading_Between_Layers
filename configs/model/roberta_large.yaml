@@ -1,0 +1,12 @@
+defaults:
+  - _base
+  - _self_
+
+name: roberta_large
+hf_id: FacebookAI/roberta-large
+family: encoder
+size_tier: A
+hidden_size: 1024
+num_layers: 24
+has_cls: true
+supports_chat_template: false

@@ -1,0 +1,14 @@
+defaults:
+  - _base
+  - _self_
+
+name: mamba_790m
+hf_id: state-spaces/mamba-790m-hf
+family: ssm
+size_tier: A
+hidden_size: 1536
+num_layers: 48
+has_cls: false
+supports_chat_template: false
+pad_token_strategy: eos
+trust_remote_code: true

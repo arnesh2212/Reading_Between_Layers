@@ -1,0 +1,12 @@
+defaults:
+  - _base
+  - _self_
+
+name: bart_base
+hf_id: facebook/bart-base
+family: encoder_decoder
+size_tier: A
+hidden_size: 768
+num_layers: 6
+has_cls: true
+supports_chat_template: false

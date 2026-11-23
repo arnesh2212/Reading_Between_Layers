@@ -1,0 +1,13 @@
+defaults:
+  - _base
+  - _self_
+
+name: xlm_clm_enfr_1024
+hf_id: FacebookAI/xlm-clm-enfr-1024
+family: encoder
+size_tier: A
+hidden_size: 1024
+num_layers: 12
+has_cls: true
+supports_chat_template: false
+# encoder-architecture trained with CLM objective on en+fr

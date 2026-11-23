@@ -1,0 +1,30 @@
+defaults:
+  - _base
+  - _self_
+
+# Use 10% of the train split for geometry by default. Set sample_size to an
+# integer to override this with an absolute cap for debugging or tight memory.
+sample_size: null
+sample_fraction: 0.1
+
+metrics:
+  isotropy_mu_viswanath: true
+  isotropy_eigenvalue_ratio: true
+  anisotropy_random_pairs: true
+  effective_rank: true
+  stable_rank: true
+  participation_ratio: true
+  rankme: true
+  alpha_req: true
+  condition_number: true
+  top1_variance_ratio: true
+  twonn_intrinsic_dim: true
+  linear_cka: true
+  lidar: true
+  jer: false
+  isoscore: true
+  geodesic_euclidean_ratio: false
+  intra_inter_cosine: false
+  information_theory_basic: true
+
+

@@ -1,0 +1,19 @@
+# Smallest end-to-end run: BERT-base on SST-2 (CLS + mean readouts, linear and
+# MLP probes, 3 seeds). Takes a few minutes on one GPU.
+#
+#   EXPERIMENT=quickstart scripts/run_sweep.sh
+defaults:
+  - _base
+
+mode: sweep
+models:
+  - bert_base_uncased
+datasets:
+  - sst2
+tasks: __auto_from_dataset__
+probes: [linear, nonlinear]
+poolings: __task_default_plus_alternatives__
+seeds: [42, 1337, 2024]
+parallelism:
+  models_in_parallel: 1
+  datasets_in_parallel: 1

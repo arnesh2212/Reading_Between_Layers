@@ -1,0 +1,12 @@
+defaults:
+  - _base
+  - _self_
+
+name: instructor_base
+hf_id: hkunlp/instructor-base
+family: encoder_decoder
+size_tier: A
+hidden_size: 768
+num_layers: 12
+has_cls: false
+supports_chat_template: false

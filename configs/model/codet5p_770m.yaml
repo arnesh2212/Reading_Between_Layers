@@ -1,0 +1,12 @@
+defaults:
+  - _base
+  - _self_
+
+name: codet5p_770m
+hf_id: Salesforce/codet5p-770m
+family: encoder_decoder
+size_tier: A
+hidden_size: 1024
+num_layers: 24
+has_cls: false
+supports_chat_template: false

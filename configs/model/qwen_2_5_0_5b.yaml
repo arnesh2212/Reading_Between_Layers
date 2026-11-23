@@ -1,0 +1,13 @@
+defaults:
+  - _base
+  - _self_
+
+name: qwen_2_5_0_5b
+hf_id: Qwen/Qwen2.5-0.5B
+family: decoder
+size_tier: A
+hidden_size: 896
+num_layers: 24
+has_cls: false
+supports_chat_template: false
+pad_token_strategy: eos

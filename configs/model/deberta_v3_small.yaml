@@ -1,0 +1,12 @@
+defaults:
+  - _base
+  - _self_
+
+name: deberta_v3_small
+hf_id: microsoft/deberta-v3-small
+family: encoder
+size_tier: A
+hidden_size: 384
+num_layers: 6
+has_cls: true
+supports_chat_template: false

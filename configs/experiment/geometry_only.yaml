@@ -1,0 +1,5 @@
+defaults:
+  - _base
+
+mode: geometry_only
+seeds: [42]

@@ -1,0 +1,12 @@
+defaults:
+  - _base
+  - _self_
+
+name: bge_base
+hf_id: BAAI/bge-base-en-v1.5
+family: sentence_transformer
+size_tier: A
+hidden_size: 768
+num_layers: 12
+has_cls: true
+supports_chat_template: false

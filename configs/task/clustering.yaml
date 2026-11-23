@@ -1,0 +1,13 @@
+defaults:
+  - _base
+  - _self_
+
+name: clustering
+metric_primary: v_measure
+metrics_secondary: [nmi, ari]
+pooling_default: cls
+pooling_options: [cls, last_token]
+allowed_families: [encoder, decoder, encoder_decoder, ssm]
+probe_type_default: linear
+probe_types_allowed: [linear]
+needs_labels_for_geometry: false

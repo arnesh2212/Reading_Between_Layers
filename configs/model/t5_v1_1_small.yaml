@@ -1,0 +1,12 @@
+defaults:
+  - _base
+  - _self_
+
+name: t5_v1_1_small
+hf_id: google/t5-v1_1-small
+family: encoder_decoder
+size_tier: A
+hidden_size: 512
+num_layers: 8
+has_cls: false
+supports_chat_template: false

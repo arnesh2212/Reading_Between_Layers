@@ -1,0 +1,15 @@
+# Base schema for an experiment config. Variants set mode and sweep selections.
+mode: ???
+models: []
+datasets: []
+datasets_by_family: {}
+tasks: []
+probes: []
+poolings: []
+seeds: [42, 1337, 2024]
+parallelism:
+  models_in_parallel: 1
+  datasets_in_parallel: 1
+resolver:
+  strict_verification: false
+  max_verified_age_days: 7

@@ -1,0 +1,30 @@
+# Additional runs that are part of the broad layerwise analysis (617 peak-layer
+# instances) but not of the 383-group SGI encoder evaluation:
+#   BERT-large / BERT-large-WWM on QQP and BIOSSES, and BGE on MRPC/QQP/BIOSSES.
+#
+#   EXPERIMENT=paper_extra scripts/run_sweep.sh
+defaults:
+  - _base
+
+mode: sweep
+models:
+  - bert_large_uncased
+  - bert_large_uncased_wwm
+  - bge_base
+
+datasets:
+  - mrpc
+  - qqp
+  - biosses
+
+datasets_by_family:
+  encoder: [qqp, biosses]
+  sentence_transformer: [mrpc, qqp, biosses]
+
+tasks: __auto_from_dataset__
+probes: [linear, nonlinear]
+poolings: __task_default_plus_alternatives__
+seeds: [42, 1337, 2024]
+parallelism:
+  models_in_parallel: 1
+  datasets_in_parallel: 1

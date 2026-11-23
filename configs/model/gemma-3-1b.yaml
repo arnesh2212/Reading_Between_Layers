@@ -1,0 +1,14 @@
+defaults:
+  - _base
+  - _self_
+
+name: gemma-3-1b
+hf_id: google/gemma-3-1b-it
+family: decoder
+size_tier: A
+hidden_size: 1152
+num_layers: 26
+has_cls: false
+supports_chat_template: true
+pad_token_strategy: default
+# gated; requires huggingface-cli login

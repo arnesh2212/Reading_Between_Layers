@@ -1,0 +1,13 @@
+defaults:
+  - _base
+  - _self_
+
+name: pythia_410m
+hf_id: EleutherAI/pythia-410m
+family: decoder
+size_tier: A
+hidden_size: 1024
+num_layers: 24
+has_cls: false
+supports_chat_template: false
+pad_token_strategy: eos

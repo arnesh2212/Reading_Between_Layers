@@ -1,0 +1,12 @@
+defaults:
+  - _base
+  - _self_
+
+name: distilbert_base_uncased
+hf_id: distilbert/distilbert-base-uncased
+family: encoder
+size_tier: A
+hidden_size: 768
+num_layers: 6
+has_cls: true
+supports_chat_template: false

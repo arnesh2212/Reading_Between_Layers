@@ -1,0 +1,13 @@
+defaults:
+  - _base
+  - _self_
+
+name: gpt_neo_125m
+hf_id: EleutherAI/gpt-neo-125m
+family: decoder
+size_tier: A
+hidden_size: 768
+num_layers: 12
+has_cls: false
+supports_chat_template: false
+pad_token_strategy: eos

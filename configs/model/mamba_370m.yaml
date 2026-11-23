@@ -1,0 +1,14 @@
+defaults:
+  - _base
+  - _self_
+
+name: mamba_370m
+hf_id: state-spaces/mamba-370m-hf
+family: ssm
+size_tier: A
+hidden_size: 1024
+num_layers: 48
+has_cls: false
+supports_chat_template: false
+pad_token_strategy: eos
+trust_remote_code: true

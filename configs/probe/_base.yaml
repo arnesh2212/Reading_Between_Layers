@@ -1,0 +1,26 @@
+# Base schema for a probe config. Concrete probe files override required fields.
+type: ???
+hidden_size_ratio: 0.5
+optimizer:
+  name: adamw
+  lr: 1.0e-3
+  weight_decay: 0.01
+scheduler:
+  name: linear_warmup
+  warmup_ratio: 0.1
+training:
+  max_epochs: 20
+  early_stopping_patience: 3
+  batch_size: 128
+  eval_batch_size: 128
+  gradient_clip: 1.0
+loss:
+  name: cross_entropy
+  label_smoothing: 0.0
+evaluation:
+  # auto trains on dataset.split_train and evaluates on dataset.split_test when
+  # the test split is separate and labeled; otherwise it falls back to a
+  # deterministic train/val/test split of the training split.
+  strategy: auto
+  selection_metric: macro_f1_if_available
+seeds: [42, 1337, 2024]

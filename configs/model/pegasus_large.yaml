@@ -1,0 +1,12 @@
+defaults:
+  - _base
+  - _self_
+
+name: pegasus_large
+hf_id: google/pegasus-large
+family: encoder_decoder
+size_tier: A
+hidden_size: 1024
+num_layers: 16
+has_cls: false
+supports_chat_template: false

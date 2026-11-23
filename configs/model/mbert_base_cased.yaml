@@ -1,0 +1,12 @@
+defaults:
+  - _base
+  - _self_
+
+name: mbert_base_cased
+hf_id: google-bert/bert-base-multilingual-cased
+family: encoder
+size_tier: A
+hidden_size: 768
+num_layers: 12
+has_cls: true
+supports_chat_template: false

@@ -1,0 +1,13 @@
+defaults:
+  - _base
+  - _self_
+
+name: multiple_choice_qa
+metric_primary: accuracy
+metrics_secondary: [calibration]
+pooling_default: last_token
+pooling_options: [last_token, cls]
+allowed_families: [encoder, decoder, encoder_decoder, ssm]
+probe_type_default: linear
+probe_types_allowed: [linear, nonlinear, lora, full_ft]
+needs_labels_for_geometry: true

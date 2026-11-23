@@ -1,0 +1,5 @@
+defaults:
+  - _base
+
+mode: probing_only
+seeds: [42, 1337, 2024]

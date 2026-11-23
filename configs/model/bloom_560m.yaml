@@ -1,0 +1,13 @@
+defaults:
+  - _base
+  - _self_
+
+name: bloom_560m
+hf_id: bigscience/bloom-560m
+family: decoder
+size_tier: A
+hidden_size: 1024
+num_layers: 24
+has_cls: false
+supports_chat_template: false
+pad_token_strategy: eos

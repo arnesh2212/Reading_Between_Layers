@@ -1,0 +1,14 @@
+defaults:
+  - _base
+  - _self_
+
+name: mamba2_130m
+hf_id: petkopetkov/mamba2-130m-hf
+family: ssm
+size_tier: A
+hidden_size: 768
+num_layers: 24
+has_cls: false
+supports_chat_template: false
+pad_token_strategy: eos
+trust_remote_code: true

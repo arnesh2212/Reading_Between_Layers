@@ -1,0 +1,13 @@
+defaults:
+  - _base
+  - _self_
+
+name: qa_generative
+metric_primary: accuracy
+metrics_secondary: [log_likelihood_margin]
+pooling_default: last_token
+pooling_options: [last_token]
+allowed_families: [decoder, encoder_decoder, ssm]
+probe_type_default: linear
+probe_types_allowed: [linear, nonlinear, lora, full_ft]
+needs_labels_for_geometry: false

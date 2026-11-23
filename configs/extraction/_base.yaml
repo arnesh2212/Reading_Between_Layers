@@ -1,0 +1,16 @@
+# Base schema for the extraction config.
+batch_size: 96
+split: null
+max_length: 512
+truncation: true
+padding: longest
+sort_by_length: false
+# Tokenize a small rolling buffer of batches in a background thread while the
+# GPU processes the current batch. Set to 0 to make tokenization synchronous.
+prefetch_batches: 2
+tokenizer_workers: 1
+return_token_embeddings: false
+layers_to_extract: all
+include_embedding_layer: false
+mask_pad_tokens: true
+mixed_precision: true

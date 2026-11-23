@@ -1,0 +1,4 @@
+defaults:
+  - _base
+
+root: ./outputs/cache

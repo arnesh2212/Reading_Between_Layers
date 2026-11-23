@@ -1,0 +1,74 @@
+# Main layerwise study of the paper: 25 models x 13 datasets.
+#
+#   python pipeline/00_resolve_sweep.py experiment=paper
+#   EXPERIMENT=paper scripts/run_sweep.sh
+#
+# Datasets are assigned per model family (`datasets_by_family`). Tasks are
+# inferred from each dataset; poolings are the task default plus its listed
+# alternatives (CLS / last-token / mean / sentence-pair readouts).
+defaults:
+  - _base
+
+mode: sweep
+models:
+  # Encoders (MLM and variants)
+  - bert_base_uncased
+  - bert_large_uncased
+  - bert_large_uncased_wwm
+  - distilbert_base_uncased
+  - roberta_base
+  - deberta_v3_base
+  - modernbert_base
+  - spanbert_base_cased
+  - ernie_2_base_en
+  - mbert_base_cased
+  - xlm_roberta_base
+  - xlm_mlm_100_1280
+  # Contrastive sentence encoders
+  - bge_base
+  - sbert_base                # sentence-transformers/all-mpnet-base-v2
+  - instructor_base
+  - sentence_t5_base
+  # Encoder-decoders
+  - t5_v1_1_base
+  - flan_t5_base
+  - byt5_base
+  - bart_base
+  # Decoder-only
+  - gpt2
+  - gpt_neo_125m
+  - pythia_70m
+  - qwen_2_5_0_5b
+  # State-space
+  - mamba_130m
+
+datasets:
+  - sst2
+  - ag_news
+  - emotion
+  - banking77
+  - snli
+  - mnli
+  - mrpc
+  - qqp
+  - sts_b
+  - biosses
+  - arc
+  - hellaswag
+  - piqa
+
+datasets_by_family:
+  # The 12 encoders x these 8 datasets form the 383-group SGI evaluation.
+  encoder: [sst2, ag_news, emotion, banking77, mnli, snli, mrpc, sts_b]
+  sentence_transformer: [banking77, ag_news, emotion, sts_b]
+  encoder_decoder: [sts_b, arc, piqa, hellaswag, banking77, ag_news, emotion]
+  decoder: [arc, piqa, hellaswag]
+  ssm: [arc, piqa, hellaswag, sts_b]
+
+tasks: __auto_from_dataset__
+probes: [linear, nonlinear]
+poolings: __task_default_plus_alternatives__
+seeds: [42, 1337, 2024]
+parallelism:
+  models_in_parallel: 1
+  datasets_in_parallel: 1

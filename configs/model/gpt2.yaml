@@ -1,0 +1,14 @@
+defaults:
+  - _base
+  - _self_
+
+name: gpt2
+hf_id: openai-community/gpt2
+family: decoder
+size_tier: A
+hidden_size: 768
+num_layers: 12
+has_cls: false
+supports_chat_template: false
+pad_token_strategy: eos
+# pre-LN; final ln_f applied only at last layer

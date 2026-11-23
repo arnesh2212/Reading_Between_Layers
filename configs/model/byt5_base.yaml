@@ -1,0 +1,13 @@
+defaults:
+  - _base
+  - _self_
+
+name: byt5_base
+hf_id: google/byt5-base
+family: encoder_decoder
+size_tier: A
+hidden_size: 1536
+num_layers: 18
+has_cls: false
+supports_chat_template: false
+# byte-level tokenization

@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+
+# Tooling
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+
+# IDE / OS
+.idea/
+.vscode/
+*.swp
+.DS_Store
+
+# Pipeline outputs (embeddings cache, Hydra runs, logs) and regenerated reports
+outputs/
+multirun/
+logs/
+wandb/
+.hydra/
+*.log
+
+# Exported result tables: only the paper's are versioned
+results/*
+!results/paper/
+
+# Secrets
+.env

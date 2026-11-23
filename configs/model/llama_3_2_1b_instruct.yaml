@@ -1,0 +1,14 @@
+defaults:
+  - _base
+  - _self_
+
+name: llama_3_2_1b_instruct
+hf_id: meta-llama/Llama-3.2-1B-Instruct
+family: decoder
+size_tier: A
+hidden_size: 2048
+num_layers: 16
+has_cls: false
+supports_chat_template: true
+pad_token_strategy: eos
+# gated; requires huggingface-cli login

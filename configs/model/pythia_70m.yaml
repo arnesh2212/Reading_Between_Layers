@@ -1,0 +1,13 @@
+defaults:
+  - _base
+  - _self_
+
+name: pythia_70m
+hf_id: EleutherAI/pythia-70m
+family: decoder
+size_tier: A
+hidden_size: 512
+num_layers: 6
+has_cls: false
+supports_chat_template: false
+pad_token_strategy: eos

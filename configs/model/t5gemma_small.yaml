@@ -1,0 +1,14 @@
+defaults:
+  - _base
+  - _self_
+
+name: t5gemma_small
+hf_id: google/t5gemma-s-s-prefixlm
+family: encoder_decoder
+size_tier: B
+hidden_size: 384
+num_layers: 12
+has_cls: false
+supports_chat_template: false
+quantization: int8
+# T5Gemma family requires quantization per tier B

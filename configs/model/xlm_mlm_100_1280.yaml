@@ -1,0 +1,12 @@
+defaults:
+  - _base
+  - _self_
+
+name: xlm_mlm_100_1280
+hf_id: FacebookAI/xlm-mlm-100-1280
+family: encoder
+size_tier: A
+hidden_size: 1280
+num_layers: 16
+has_cls: true
+supports_chat_template: false

@@ -1,0 +1,13 @@
+defaults:
+  - _base
+  - _self_
+
+name: pair_classification
+metric_primary: accuracy
+metrics_secondary: [macro_f1]
+pooling_default: cls
+pooling_options: [cls, sbert_pair]
+allowed_families: [encoder, decoder, encoder_decoder, ssm]
+probe_type_default: linear
+probe_types_allowed: [linear, nonlinear, lora, full_ft]
+needs_labels_for_geometry: true

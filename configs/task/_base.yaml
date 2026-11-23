@@ -1,0 +1,10 @@
+# Base schema for a task config. Concrete task files override required fields.
+name: ???
+metric_primary: ???
+metrics_secondary: []
+pooling_default: ???
+pooling_options: []
+allowed_families: []
+probe_type_default: linear
+probe_types_allowed: [linear, nonlinear, lora, full_ft]
+needs_labels_for_geometry: false

@@ -1,0 +1,12 @@
+defaults:
+  - _base
+  - _self_
+
+name: bert_base_uncased
+hf_id: google-bert/bert-base-uncased
+family: encoder
+size_tier: A
+hidden_size: 768
+num_layers: 12
+has_cls: true
+supports_chat_template: false

@@ -1,0 +1,23 @@
+defaults:
+  - _base
+  - _self_
+
+metrics:
+  isotropy_mu_viswanath: true
+  isotropy_eigenvalue_ratio: true
+  anisotropy_random_pairs: true
+  effective_rank: true
+  stable_rank: true
+  participation_ratio: true
+  rankme: true
+  alpha_req: true
+  condition_number: true
+  top1_variance_ratio: true
+  twonn_intrinsic_dim: true
+  linear_cka: true
+  lidar: true
+  jer: true
+  isoscore: true
+  geodesic_euclidean_ratio: true
+  intra_inter_cosine: true
+  information_theory_basic: true

@@ -1,0 +1,23 @@
+# Top-level Hydra composition. Concrete model, dataset, and task are required at runtime.
+defaults:
+  - _self_
+  - model: bert_base_uncased
+  - dataset: sst2
+  - task: classification
+  - probe: linear
+  - geometry: fast_only
+  - pooling: cls
+  - cache: default
+  - extraction: default
+  - experiment: single_model_single_task
+
+seed: 42
+device: cuda
+dtype: float16
+output_dir: ${hydra:runtime.output_dir}
+plots_root: outputs/plots
+wandb:
+  enabled: false
+  project: reading_between_layers
+  entity: null
+  tags: []

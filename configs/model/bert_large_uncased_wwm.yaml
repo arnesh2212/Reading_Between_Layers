@@ -1,0 +1,12 @@
+defaults:
+  - _base
+  - _self_
+
+name: bert_large_uncased_wwm
+hf_id: google-bert/bert-large-uncased-whole-word-masking
+family: encoder
+size_tier: A
+hidden_size: 1024
+num_layers: 24
+has_cls: true
+supports_chat_template: false

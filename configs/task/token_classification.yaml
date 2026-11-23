@@ -1,0 +1,13 @@
+defaults:
+  - _base
+  - _self_
+
+name: token_classification
+metric_primary: f1_seqeval
+metrics_secondary: [per_class_f1]
+pooling_default: per_token
+pooling_options: [per_token]
+allowed_families: [encoder, decoder, encoder_decoder, ssm]
+probe_type_default: linear
+probe_types_allowed: [linear, nonlinear, lora, full_ft]
+needs_labels_for_geometry: true

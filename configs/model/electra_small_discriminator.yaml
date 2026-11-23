@@ -1,0 +1,12 @@
+defaults:
+  - _base
+  - _self_
+
+name: electra_small_discriminator
+hf_id: google/electra-small-discriminator
+family: encoder
+size_tier: A
+hidden_size: 256
+num_layers: 12
+has_cls: true
+supports_chat_template: false
